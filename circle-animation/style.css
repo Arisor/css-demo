@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #111;
+}
+.box{
+  width: 200px;
+  height: 200px;
+  background: url(./bg.jpg) center no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box:before,.box:after{
+  content: '';
+  border: 2px solid #ffeaa7;
+  position: absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: -10px;
+  animation: clip-animation 8s ease infinite;
+}
+@keyframes clip-animation{
+  0%, 100%{
+    clip: rect(0px,220px,2px,0px)
+  }
+  25%{
+    clip: rect(0px,220px,220px,218px)
+  }
+  50%{
+    clip: rect(218px,220px,220px,0px)
+  }
+  75%{
+    clip: rect(0px,2px,220px,0px)
+  }
+}
+.box:after{
+  animation-delay: -4s;
+}
+.box:hover:before,.box:hover:after{
+  animation-play-state: paused;
+}

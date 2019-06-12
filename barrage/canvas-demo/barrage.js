@@ -71,7 +71,7 @@
 
   }
   let barrage;
-  document.getElementById('video').addEventListener('loadedmetadata', () => {
+  document.getElementById('video').addEventListener('play', () => {
     if (!barrage) {
       barrage = new Barrage('canvas');
       barrage.draw();
@@ -83,6 +83,9 @@
         barrage.shoot(t);
       })
     }
+  })
+  document.getElementById('video').addEventListener('ended', () => {
+    barrage = null;
   })
 
 })();

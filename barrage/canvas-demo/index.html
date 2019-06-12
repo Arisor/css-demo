@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas弹幕</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="box-wrapper">
+    <video id="video" controls="controls" autoplay="autoplay" style="width:100%;height:100%;">
+      <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg" />
+      <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <canvas id="canvas" width="500" height="340" style="position:absolute;top:0;left:0;">
+      您的浏览器不支持canvas标签。
+    </canvas>
+  </div>
+  <script src="barrage.js"></script>
+</body>
+
+</html>

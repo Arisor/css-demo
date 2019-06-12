@@ -1,0 +1,8 @@
+.box-wrapper{
+  position:relative;
+  width:500px;
+  height:400px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 100px;
+}

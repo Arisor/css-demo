@@ -1,0 +1,25 @@
+.screen {
+  height: 400px;
+  width: 600px;
+  border: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.screen .barrage {
+  position: absolute;
+  width: 64px;
+  top: 20px;
+  animation: barrage 5s linear infinite;
+}
+@keyframes barrage {
+  from {
+    left:100%;
+  }
+  to {
+    left: 0;
+    transform: translateX(-100%)
+  }
+}

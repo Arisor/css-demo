@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Json2Js</title>
+  <style>
+    button {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea name="" id="JSON" cols="100" rows="30"></textarea>
+  <textarea name="" id="JS" cols="100" rows="30"></textarea>
+  <button onclick="change()">转换</button>
+</body>
+<script>
+  function change() {
+    const JSONObj = document.getElementById('JSON')
+    const JSObj = document.getElementById('JS')
+    let _JSONObj = JSONObj.value.replace(/"/g, "'")
+    for (const item of Object.keys(JSON.parse(JSONObj.value))) {
+      _JSONObj = _JSONObj.replace(new RegExp(`'${item}'`, 'g'), item)
+    }
+    JSObj.value = _JSONObj
+  }
+</script>
+
+</html>
